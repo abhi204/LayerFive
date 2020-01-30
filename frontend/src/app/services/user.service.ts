@@ -2,14 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { User } from '../models/user';
 import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  user_url = 'http://localhost:8000/user/';
+  user_url = 'http://localhost:8000/api/user/';
 
   constructor( private http: HttpClient) { }
 
